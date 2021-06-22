@@ -1,12 +1,19 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
-})
+    state: {
+        totalFromVueX: 30,
+    },
+    getters: {
+        doubleDuTotal(state) {
+            return state.totalFromVueX * 2;
+        },
+    },
+    mutations: {
+        setTotalFromVueX(state, newValue) {
+            state.totalFromVueX = newValue;
+        },
+    },
+    actions: {},
+    modules: {},
+});
